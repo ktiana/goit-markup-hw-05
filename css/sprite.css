@@ -1,0 +1,39 @@
+.actions {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    outline: 1px solid red;
+    list-style: none;
+}
+
+.actions button{
+    display: block;
+    /* background-image: url(../images/twitter-min.svg); */
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+}
+
+.button{
+    padding: 0;
+    margin: 0;
+
+   
+}
+
+.button-icon{
+    width: 44px;
+    height: 44px;
+    fill: red;
+
+}
+.button-icon:hover{
+    fill: blueviolet;
+}
+.button:hover{
+    fill:aqua;
+}
+.subscribe {
+    margin-left: 516px;
+}
