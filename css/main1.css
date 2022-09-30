@@ -734,69 +734,49 @@ text-align: center;
 }
 
 
-/* /* ANIMATION ==================================================
+/* /* MODAL ==================================================
 ================================================================*/
-/*  */
-/* 
- | Modal window
-  |============================
-*/ 
-
 /* початковий стан */
 .backdrop {
 	position: fixed;
 	top: 0;
 	left: 0;
-
 	height: 100%;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.2);
-
 	opacity: 1;
 	transition: opacity 250ms var(--cubic);
   visibility: visible;
   pointer-events: initial;
-
 }
-
-
-
 .modal {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
+	transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
 	opacity: 1;
-
 	height: 581px;
 	width: 528px;
-
+  border-radius: 4px; 
 	background: var(--white-text-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
-  transition: opacity 250ms var(--cubic);
 }
-
 .backdrop.is-hidden {
 	opacity: 0;
 	pointer-events: none;
   visibility: hidden;
 }
-
 /* кінцевий стан */
 .backdrop.is-hidden .modal {
   opacity: 0;
-	transform: translate(-50%, -50%) scale (0.3) rotate (180deg);
+	transform: translate(-50%, -50%);
 }
-
 .close-btn {
 	position: absolute;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 	right: 8px;
 	top: 8px;
 	background-color: transparent;
