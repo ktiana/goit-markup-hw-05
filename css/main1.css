@@ -8,7 +8,7 @@
   --secondary-background-color: #f5f4fa;
   --hero-bachground-color: #2f303a;
   --black: #000000;
-  --transition: cubic-bezier(0.4, 0, 0.2, 1) 
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1) 
 }
 
 /* RRESET */
@@ -54,10 +54,12 @@ a {
   margin-bottom: 0;
   padding: 0;
   color: currentColor;
+  /* transition: 250ms color var(--cubic); */
 }
 .link {
 	text-decoration: none;
 	color: inherit;
+  /* transition: color 250ms var(--timing-function) */
 }
 
 .link.current {
@@ -96,7 +98,7 @@ a {
 
 .activity-section{
   margin-top: 94px;
-  margin-bottom: 0;
+  margin-bottom: 94px;
 }
 .team-section{
   padding-top: 94px;
@@ -150,11 +152,18 @@ a {
 .header{
 border-bottom: 1px solid #ECECEC;
 }
+.header-nav{
+
+}
 .header-nav-list {
     display: flex;
     margin-left: 93px;
     gap: 50px;
     position: relative;
+       
+}
+.nav-link{
+transition: 250ms color var(--cubic);
 }
 
 .current{
@@ -212,6 +221,7 @@ cursor: pointer;
 .link-header-phone{
   display:flex;
   align-items: center;
+   transition: 250ms color var(--cubic);
 }
 
 .link-header-email:hover,
@@ -418,9 +428,13 @@ gap: 10px;
 
 .team-svg{
   fill: #AFB1B8;
+  transition: 250ms fill var(--cubic);
 } 
-
+.team-svg{
+  transition: 250ms color var(--cubic);
+}
 .social-icon-link{
+  
     display: flex;
     justify-content: center;
     text-align: center;
@@ -433,11 +447,15 @@ gap: 10px;
       width: 44px;
       height: 44px;
       margin: 0;
+
+       transition: 250ms background-color var(--cubic);
+      
 } 
 
 .social-icon-link:hover,
 .social-icon-link:focus { 
     background-color: var(--accent-color);
+    
     color: var(--white-text-color);
  }
 
@@ -457,6 +475,7 @@ gap: 10px;
 
 .clients-icon{
   fill:#AFB1B8;
+  transition: 250ms fill var(--cubic);
 }
 
 .clients-logo {
@@ -467,8 +486,11 @@ gap: 10px;
   width: 170px;
   height: 92px;
   border: 1px solid #AFB1B8;
+
   border-radius: 4px;
   color:#AFB1B8;
+
+   transition: 250ms  border-color var(--cubic);
 }
 
 .clients-logo:hover .clients-icon,
@@ -511,6 +533,7 @@ gap: 10px;
   margin-bottom: 9px;
   gap: 9px;
   cursor: pointer;
+   transition: 250ms color var(--cubic);
 }
 .footer-address:hover,
 .footer-address:focus{
@@ -523,6 +546,7 @@ gap: 10px;
   line-height: 1.7;
   margin-bottom: 9px;
   cursor: pointer;
+   transition: 250ms color var(--cubic);
 }
 .footer-email:hover,
 .footer-email:focus{
@@ -533,6 +557,7 @@ gap: 10px;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.7;
   cursor: pointer;
+   transition: 250ms color var(--cubic);
 }
 .footer-phone:hover,
 .footer-phone:focus{
@@ -571,6 +596,8 @@ color: var(--white-text-color);
   width: 44px;
   height: 44px;
   margin: 0;
+
+   transition: 250ms background var(--cubic);
   } 
 
 .social-icon-link {
@@ -614,13 +641,20 @@ text-align: center;
   background: #f5f4fa;
   border-radius: 4px;
   padding: 6px 22px;
+
+  transition-property: box-shadow, color, background;;
+    transition-duration:250ms ;
+    transition-timing-function: var(--cubic);
+    transition-delay: 0;
 }
+
 
 .btn-filtr:focus,
 .btn-filtr:hover {
   background-color: var(--accent-color);
   color: var(--white-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
 }
 
 .btn-container {
@@ -629,6 +663,12 @@ text-align: center;
   padding-right: 15px;
 } 
 
+.portfolio-link{
+ transition-property: box-shadow;
+    transition-duration:250ms ;
+    transition-timing-function: var(--cubic);
+    transition-delay: 0;
+}
 
 .portfolio-list {
   display: flex;
@@ -693,7 +733,10 @@ text-align: center;
 
 .portfolio-overlay{
   position: relative;
-  /* overflow: hidden; */
+    transition-property: color, background;
+    transition-duration:250ms ;
+    transition-timing-function: var(--cubic);
+
 }
 
 .portfolio-overlay-text{
@@ -715,7 +758,13 @@ text-align: center;
 	font-size: 18px;
 	line-height: 1.56;
 	color: var(--white-text-color);
+
+   transition-property: color, background;
+    transition-duration:250ms ;
+    transition-timing-function: var(--cubic);
+    transition-delay: 0;
 }
+
 
 .portfolio-link .portfolio-overlay-text,
 .portfolio-link .portfolio-overlay-text {
